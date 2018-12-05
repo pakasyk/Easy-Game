@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playground {
+  width: 90%;
+  min-width: 400px;
+  height: 90%;
+  background-color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.playground .minion {
+  width: 100px;
+  height: 120px;
+  min-height: 110px;
+  background-color: lightgreen;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+}
+
+.playground .minion .eyes {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  position: absolute;
+}
+
+.playground .minion .eyes:nth-child(1) {
+  top: 50px;
+  left: 30px;
+}
+
+.playground .minion .eyes:nth-child(2) {
+  top: 50px;
+  right: 30px;
+}
+
+.playground .minion .mouth {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-color: darkred;
+  top: 80px;
+  left: calc(50% - 25px);
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  -webkit-transition: all .05s;
+  transition: all .05s;
+}
+
+.playground .minion:active .mouth {
+  height: 1px;
+  background-color: #000;
+}
+
+@-webkit-keyframes mouth {
+  0% {
+    height: 20px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+  50% {
+    height: 1px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  100% {
+    height: 20px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+}
+
+@keyframes mouth {
+  0% {
+    height: 20px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+  50% {
+    height: 1px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  100% {
+    height: 20px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
